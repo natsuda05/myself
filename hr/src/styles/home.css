@@ -1,0 +1,375 @@
+.dashboard {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.welcome-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.top-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.summary-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.bottom-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* นาฬิกา */
+.big-clock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    text-align: center;
+}
+
+.big-clock .time {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1e3523;
+}
+
+.big-clock .date {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 8px;
+}
+
+/* สถานะการทำงาน */
+.work-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.status-text {
+    color: #3cb371;
+    margin: 8px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    align-self: center;
+}
+
+.work-status .time-info {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* กล่องสรุปเล็ก */
+.card.small {
+    text-align: center;
+}
+
+.card.small p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+}
+
+.card.small h3 {
+    margin-top: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* งานวันนี้ */
+.task-list .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.task-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f9f9f9;
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.task .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.task-info {
+    flex: 1;
+    margin-left: 8px;
+}
+
+.task-title {
+    margin: 0;
+    font-weight: 500;
+}
+
+.task small {
+    color: #666;
+}
+
+/* สีงาน */
+.task.blue .dot {
+    background: #1890ff;
+}
+
+.task.yellow .dot {
+    background: #faad14;
+}
+
+.task.green .dot {
+    background: #52c41a;
+}
+
+.task.red .dot {
+    background: #f5222d;
+}
+
+.task.purple .dot {
+    background: #722ed1;
+}
+
+
+/* badge */
+.badge {
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.badge-blue {
+    background: #e4f2ff;
+    color: #1890ff;
+}
+
+.badge-red {
+    background: #ffebec;
+    color: #f5222d;
+}
+
+.badge-green {
+    background: #e4ffd7;
+    color: #52c41a;
+}
+
+.badge-yellow {
+    background: #fff3dc;
+    color: #faad14;
+}
+
+.badge-purple {
+    background: #f2e8ff;
+    color: #722ed1;
+}
+
+/* กราฟ */
+.weekly-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.weekly-hours canvas {
+    max-height: 200px;
+}
+
+.weekly-hours .total {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #444;
+}
+
+.weekly-hours .total strong {
+    color: #007bff;
+}
+/* --- สไตล์สำหรับ Personal Summary Card (มุมมองพนักงาน) --- */
+
+.personal-summary-card {
+    /* ใช้พื้นที่ฝั่งเดียวกับกราฟเดิม */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* แบ่งเป็น 2x2 */
+    gap: 10px;
+}
+
+.summary-item {
+    background: #f0f4f8;
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 5px solid transparent;
+}
+
+.summary-item p {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 3px;
+}
+
+.summary-item h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.summary-item h4 small {
+    font-size: 0.8rem;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+/* Colors */
+.summary-item.item-blue { border-left-color: #007bff; background: #e6f7ff; }
+.summary-item.item-green { border-left-color: #28a745; background: #f0fff4; }
+.summary-item.item-yellow { border-left-color: #ffc107; background: #fffde7; }
+.summary-item.item-red { border-left-color: #dc3545; background: #fff0f0; }
+
+.summary-footer {
+    text-align: right;
+    padding-top: 10px;
+}
+.summary-footer a {
+    color: #007bff;
+    font-size: 0.85rem;
+    text-decoration: none;
+}
+.summary-footer a:hover {
+    text-decoration: underline;
+}
+
+/* --- สไตล์สำหรับตารางสรุปพนักงานใน Card task-list --- */
+
+.monthly-summary-table-card {
+    /* ทำให้เนื้อหาหลักสามารถ scroll ได้ */
+    display: flex;
+    flex-direction: column;
+}
+
+.table-wrapper {
+    /* กำหนดความสูงสูงสุดเพื่อให้ตาราง scroll ได้ (ถ้าข้อมูลยาวเกิน) */
+    max-height: 400px; /* ปรับค่านี้ตามความเหมาะสมของหน้าจอ */
+    overflow-y: auto;
+    margin-top: 10px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.employee-time-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    table-layout: fixed; /* เพื่อให้คอลัมน์กว้างเท่ากัน */
+}
+
+.employee-time-summary-table th,
+.employee-time-summary-table td {
+    padding: 10px 8px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.employee-time-summary-table th {
+    background-color: #f8f8f8;
+    text-align: left;
+    font-weight: 600;
+    color: #555;
+    position: sticky;
+    top: 0; /* ทำให้ Header ค้างอยู่เวลา scroll */
+    z-index: 10;
+}
+
+.employee-time-summary-table td {
+    vertical-align: middle;
+}
+
+.employee-time-summary-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.employee-name-cell .task-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+}
+.employee-name-cell small {
+    display: block;
+    color: #888;
+    font-size: 0.75rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.count-badge {
+    background-color: #e9ecef;
+    color: #495057;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+.total-hours {
+    font-weight: 600;
+    color: #007bff;
+}
+
+/* Badge for Attendance Rate */
+.rate-badge {
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+.badge-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+.badge-warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+.badge-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
